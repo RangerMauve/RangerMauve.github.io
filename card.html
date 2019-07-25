@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<title>RangerMauve</title>
+<style>
+  .card-body {
+    width: 3.5in;
+    height: 2in;
+    display: flex;
+    border: 1px solid black;
+    font-family: Consolas;
+    margin: 2em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-logo {
+    width: 45%;
+    object-fit: contain;
+  }
+  .card-info-section {
+    padding-right: 20px;
+    text-align: right;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-info {
+    margin: 0.25em;
+  }
+
+  .card-qr-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-qr {
+    height: 1.5in;
+    width: 1.5in;
+    object-fit: contain;
+    align-self: center;
+  }
+</style>
+<div class="card-body">
+  <img class="card-logo" src="./RangerMauve.svg"/>
+  <div class="card-info-section">
+    <div class="card-info">@RangerMauve</div>
+    <div class="card-info">Georgiy Shibaev</div>
+    <div class="card-info">Mauve Software Inc</div>
+    <div class="card-info">ranger@mauve.moe</div>
+  </div>
+</div>
+<div class="card-body">
+  <div class="card-qr-section">
+    <img class="card-qr" src="./https-qrcode.svg" />
+    <a href="https://ranger.mauve.moe/">https://ranger.mauve.moe</a>
+  </div>
+</div>
