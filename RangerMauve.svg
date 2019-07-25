@@ -13,8 +13,6 @@
 
     .sclera {
       fill: #FCFCFC;
-      stroke: #111;
-      stroke-width: 10;
     }
 
     .aperture {
@@ -41,6 +39,7 @@
     }
 	</style>
   <g transform="rotate(-90, 333 333) translate(333, 333)">
+    <circle class="sclera" r="300" />
     <g transform="translate(-144.99999999999997 -111.3525491562421)">
       <g transform="translate(111.35254915624212 111.35254915624212)">
         <circle class="iris" r="106.35254915624212"/>

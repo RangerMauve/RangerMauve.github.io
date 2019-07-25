@@ -28,8 +28,6 @@ console.log(`
 
     .sclera {
       fill: ${WHITE};
-      stroke: ${BLACK};
-      stroke-width: ${OUTLINE_WIDTH};
     }
 
     .aperture {
@@ -56,6 +54,7 @@ console.log(`
     }
 	</style>
   <g transform="rotate(-90, 333 333) translate(333, 333)">
+    <circle class="sclera" r="${RADIUS}" />
     <g transform="translate(${xAt(180) * RADIUS * BOTTOM_POINT + OUTLINE_WIDTH / 2 } ${yAt(180) * RADIUS * BOTTOM_POINT - (SQUARE_SIZE / 2)})">
       <g transform="translate(${SQUARE_SIZE / 2} ${SQUARE_SIZE / 2})">
         <circle class="iris" r="${IRIS_SIZE}"/>
