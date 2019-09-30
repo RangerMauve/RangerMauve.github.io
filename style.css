@@ -4,6 +4,13 @@ body {
 	text-align: center;
 }
 
+body {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 666px;
+}
+
 .eye {
 	max-width: 256px;
 }
