@@ -6,56 +6,65 @@ const PINK = `#E62EA5`
 const CANVAS_SIZE = 666
 const RADIUS = 300
 const OUTLINE_WIDTH = RADIUS / 32;
+const ORBIT_SIZE = RADIUS / 8
+const ORBIT_DISTANCE = RADIUS / 4 + ORBIT_SIZE * 3
+const OUTER_DISTANCE = ORBIT_DISTANCE + ORBIT_SIZE * 2
+const CHARM_SIZE = RADIUS / 16
 
 console.log(`
 <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 ${CANVAS_SIZE} ${CANVAS_SIZE}" width="${CANVAS_SIZE}" height="${CANVAS_SIZE}">
   <style>
 		.outline {
 			fill: ${WHITE};
-			stroke: ${BLACK};
 		}
 
-		.inner-circle {
-			fill: none;
-			stroke: ${BLACK};
-			stroke-width: ${OUTLINE_WIDTH};
-		}
-
-		.bigs, .container {
-			fill: none;
-			stroke: ${BLACK};
-			stroke-width: ${OUTLINE_WIDTH};
-		}
-
-		.smalls {
+		.heart, .orbits {
 			fill: ${PURPLE};
+		}
+
+		.whiteout {
+			fill: ${WHITE};
+			stroke: ${WHITE};
+			stroke-width: ${OUTLINE_WIDTH};
+		}
+
+		.strike {
 			stroke: ${BLACK};
 			stroke-width: ${OUTLINE_WIDTH};
 		}
 
-		.inner-shape,	.inner-blip {
-			fill: ${PURPLE};
-			stroke: ${BLACK};
-			stroke-width: ${OUTLINE_WIDTH};
+		.charm {
+			fill: ${BLACK};
 		}
   </style>
   <g transform="rotate(-90, ${CANVAS_SIZE/2}, ${CANVAS_SIZE/2}) translate(${CANVAS_SIZE/2}, ${CANVAS_SIZE/2})">
 		<!-- TODO: Remove me -->
     <circle class="outline" r="${RADIUS}" />
 
-    <!-- <path class="inner-shape" d="${anglesToPath([0, 180, 180 + 45, 180 + 90, 180 + 90 + 45], RADIUS / 2)} Z" stroke-linecap="round"/> -->
-
-		<circle class="inner-blip" r="${RADIUS/8}" ${centerPoint(270, RADIUS / 8)} />
-		<circle class="inner-blip" r="${RADIUS/8}" ${centerPoint(270, RADIUS - RADIUS / 4 - RADIUS / 8)} />
-		<circle class="inner-blip" r="${RADIUS/8}" ${centerPoint(90, RADIUS / 2)} />
-		<circle class="inner-blip" r="${RADIUS/16}" ${centerPoint(90, RADIUS / 2 + RADIUS / 8 + RADIUS / 16)} />
-
     <!-- ${makeDots(4, RADIUS - (RADIUS / 4), 0, RADIUS / 4, 'bigs')} -->
     <!--<circle class="inner-circle" r="${RADIUS - (RADIUS/4)}" />-->
+    <!-- ${makeDots(16, RADIUS - (RADIUS / 16), 45, RADIUS / 16, 'smalls')} -->
 
-    <path class="container" d="${anglesToPath([0, 90, 180, 270], RADIUS)} Z" stroke-linecap="round"/>
+    <circle class="heart" r="${RADIUS / 4}" />
+    ${makeDots(8, ORBIT_DISTANCE, 0, ORBIT_SIZE, 'orbits')}
 
-    ${makeDots(16, RADIUS - (RADIUS / 16), 45, RADIUS / 16, 'smalls')}
+		<!-- White out some o the orbits -->
+    <circle class="whiteout" r="${ORBIT_SIZE + 2}" ${centerPoint(30 + 15, ORBIT_DISTANCE)} />
+    <circle class="whiteout" r="${ORBIT_SIZE + 2}" ${centerPoint(180, ORBIT_DISTANCE)} />
+    <circle class="whiteout" r="${ORBIT_SIZE + 2}" ${centerPoint(270, ORBIT_DISTANCE)} />
+
+		<!-- Add some outer orbits -->
+    <circle class="orbits" r="${ORBIT_SIZE}" ${centerPoint(45, OUTER_DISTANCE)} />
+    <circle class="orbits" r="${ORBIT_SIZE}" ${centerPoint(180, OUTER_DISTANCE)} />
+    <circle class="orbits" r="${ORBIT_SIZE}" ${centerPoint(270, OUTER_DISTANCE)} />
+
+		${lineBetween(0, 180, RADIUS, 'strike')}
+		${lineBetween(0, 180 - 45, ORBIT_DISTANCE, 'strike')}
+		${lineBetween(0, 180 + 45, ORBIT_DISTANCE, 'strike')}
+
+		<circle class="charm" r="${CHARM_SIZE}" ${centerPoint(45, OUTER_DISTANCE)} />
+    <circle class="charm" r="${CHARM_SIZE}" ${centerPoint(180, OUTER_DISTANCE)} />
+    <circle class="charm" r="${CHARM_SIZE}" ${centerPoint(270, OUTER_DISTANCE)} />
   </g>
 </svg>
 `)

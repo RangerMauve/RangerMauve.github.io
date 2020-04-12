@@ -3,53 +3,37 @@
   <style>
 		.outline {
 			fill: #FCFCFC;
-			stroke: #111;
 		}
 
-		.inner-circle {
-			fill: none;
-			stroke: #111;
-			stroke-width: 9.375;
-		}
-
-		.bigs, .container {
-			fill: none;
-			stroke: #111;
-			stroke-width: 9.375;
-		}
-
-		.smalls {
+		.heart, .orbits {
 			fill: rgb(165, 24, 201);
+		}
+
+		.whiteout {
+			fill: #FCFCFC;
+			stroke: #FCFCFC;
+			stroke-width: 9.375;
+		}
+
+		.strike {
 			stroke: #111;
 			stroke-width: 9.375;
 		}
 
-		.inner-shape,	.inner-blip {
-			fill: rgb(165, 24, 201);
-			stroke: #111;
-			stroke-width: 9.375;
+		.charm {
+			fill: #111;
 		}
   </style>
   <g transform="rotate(-90, 333, 333) translate(333, 333)">
 		<!-- TODO: Remove me -->
     <circle class="outline" r="300" />
 
-    <!-- <path class="inner-shape" d="M 150.00 0.00 L -150.00 0.00 L -106.07 -106.07 L -0.00 -150.00 L 106.07 -106.07 Z" stroke-linecap="round"/> -->
-
-		<circle class="inner-blip" r="37.5" cx="-6.8886382452038615e-15" cy="-37.5" />
-		<circle class="inner-blip" r="37.5" cx="-3.4443191226019305e-14" cy="-187.5" />
-		<circle class="inner-blip" r="37.5" cx="9.184850993605149e-15" cy="150" />
-		<circle class="inner-blip" r="18.75" cx="1.262917011620708e-14" cy="206.25" />
-
     <!-- <circle class="bigs" r="75" cx="225" cy="0" />
 <circle class="bigs" r="75" cx="1.3777276490407723e-14" cy="225" />
 <circle class="bigs" r="75" cx="-225" cy="2.7554552980815446e-14" />
 <circle class="bigs" r="75" cx="-4.133182947122317e-14" cy="-225" /> -->
     <!--<circle class="inner-circle" r="225" />-->
-
-    <path class="container" d="M 300.00 0.00 L 0.00 300.00 L -300.00 0.00 L -0.00 -300.00 Z" stroke-linecap="round"/>
-
-    <circle class="smalls" r="18.75" cx="198.8737822087165" cy="198.87378220871648" />
+    <!-- <circle class="smalls" r="18.75" cx="198.8737822087165" cy="198.87378220871648" />
 <circle class="smalls" r="18.75" cx="107.62971535268152" cy="259.8411185187994" />
 <circle class="smalls" r="18.75" cx="1.7221595613009655e-14" cy="281.25" />
 <circle class="smalls" r="18.75" cx="-107.62971535268149" cy="259.8411185187994" />
@@ -64,7 +48,35 @@
 <circle class="smalls" r="18.75" cx="198.87378220871645" cy="-198.87378220871653" />
 <circle class="smalls" r="18.75" cx="259.8411185187994" cy="-107.62971535268144" />
 <circle class="smalls" r="18.75" cx="281.25" cy="-6.888638245203862e-14" />
-<circle class="smalls" r="18.75" cx="259.8411185187994" cy="107.62971535268154" />
+<circle class="smalls" r="18.75" cx="259.8411185187994" cy="107.62971535268154" /> -->
+
+    <circle class="heart" r="75" />
+    <circle class="orbits" r="37.5" cx="187.5" cy="0" />
+<circle class="orbits" r="37.5" cx="132.58252147247768" cy="132.58252147247765" />
+<circle class="orbits" r="37.5" cx="1.1481063742006436e-14" cy="187.5" />
+<circle class="orbits" r="37.5" cx="-132.58252147247765" cy="132.58252147247768" />
+<circle class="orbits" r="37.5" cx="-187.5" cy="2.2962127484012872e-14" />
+<circle class="orbits" r="37.5" cx="-132.58252147247768" cy="-132.58252147247765" />
+<circle class="orbits" r="37.5" cx="-3.4443191226019305e-14" cy="-187.5" />
+<circle class="orbits" r="37.5" cx="132.58252147247762" cy="-132.58252147247768" />
+
+		<!-- White out some o the orbits -->
+    <circle class="whiteout" r="39.5" cx="132.58252147247768" cy="132.58252147247765" />
+    <circle class="whiteout" r="39.5" cx="-187.5" cy="2.2962127484012872e-14" />
+    <circle class="whiteout" r="39.5" cx="-3.4443191226019305e-14" cy="-187.5" />
+
+		<!-- Add some outer orbits -->
+    <circle class="orbits" r="37.5" cx="185.61553006146875" cy="185.61553006146872" />
+    <circle class="orbits" r="37.5" cx="-262.5" cy="3.214697847761802e-14" />
+    <circle class="orbits" r="37.5" cx="-4.822046771642703e-14" cy="-262.5" />
+
+		<line class="strike" x1="300" y1="0" x2="-300" y2="3.6739403974420595e-14" />
+		<line class="strike" x1="187.5" y1="0" x2="-132.58252147247765" y2="132.58252147247768" />
+		<line class="strike" x1="187.5" y1="0" x2="-132.58252147247768" y2="-132.58252147247765" />
+
+		<circle class="charm" r="18.75" cx="185.61553006146875" cy="185.61553006146872" />
+    <circle class="charm" r="18.75" cx="-262.5" cy="3.214697847761802e-14" />
+    <circle class="charm" r="18.75" cx="-4.822046771642703e-14" cy="-262.5" />
   </g>
 </svg>
 
