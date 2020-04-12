@@ -1,0 +1,70 @@
+
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 666 666" width="666" height="666">
+  <style>
+		.outline {
+			fill: #FCFCFC;
+			stroke: #111;
+		}
+
+		.inner-circle {
+			fill: none;
+			stroke: #111;
+			stroke-width: 9.375;
+		}
+
+		.bigs, .container {
+			fill: none;
+			stroke: #111;
+			stroke-width: 9.375;
+		}
+
+		.smalls {
+			fill: rgb(165, 24, 201);
+			stroke: #111;
+			stroke-width: 9.375;
+		}
+
+		.inner-shape,	.inner-blip {
+			fill: rgb(165, 24, 201);
+			stroke: #111;
+			stroke-width: 9.375;
+		}
+  </style>
+  <g transform="rotate(-90, 333, 333) translate(333, 333)">
+		<!-- TODO: Remove me -->
+    <circle class="outline" r="300" />
+
+    <!-- <path class="inner-shape" d="M 150.00 0.00 L -150.00 0.00 L -106.07 -106.07 L -0.00 -150.00 L 106.07 -106.07 Z" stroke-linecap="round"/> -->
+
+		<circle class="inner-blip" r="37.5" cx="-6.8886382452038615e-15" cy="-37.5" />
+		<circle class="inner-blip" r="37.5" cx="-3.4443191226019305e-14" cy="-187.5" />
+		<circle class="inner-blip" r="37.5" cx="9.184850993605149e-15" cy="150" />
+		<circle class="inner-blip" r="18.75" cx="1.262917011620708e-14" cy="206.25" />
+
+    <!-- <circle class="bigs" r="75" cx="225" cy="0" />
+<circle class="bigs" r="75" cx="1.3777276490407723e-14" cy="225" />
+<circle class="bigs" r="75" cx="-225" cy="2.7554552980815446e-14" />
+<circle class="bigs" r="75" cx="-4.133182947122317e-14" cy="-225" /> -->
+    <!--<circle class="inner-circle" r="225" />-->
+
+    <path class="container" d="M 300.00 0.00 L 0.00 300.00 L -300.00 0.00 L -0.00 -300.00 Z" stroke-linecap="round"/>
+
+    <circle class="smalls" r="18.75" cx="198.8737822087165" cy="198.87378220871648" />
+<circle class="smalls" r="18.75" cx="107.62971535268152" cy="259.8411185187994" />
+<circle class="smalls" r="18.75" cx="1.7221595613009655e-14" cy="281.25" />
+<circle class="smalls" r="18.75" cx="-107.62971535268149" cy="259.8411185187994" />
+<circle class="smalls" r="18.75" cx="-198.87378220871648" cy="198.8737822087165" />
+<circle class="smalls" r="18.75" cx="-259.8411185187994" cy="107.62971535268153" />
+<circle class="smalls" r="18.75" cx="-281.25" cy="3.444319122601931e-14" />
+<circle class="smalls" r="18.75" cx="-259.8411185187994" cy="-107.62971535268147" />
+<circle class="smalls" r="18.75" cx="-198.87378220871653" cy="-198.87378220871648" />
+<circle class="smalls" r="18.75" cx="-107.62971535268143" cy="-259.8411185187994" />
+<circle class="smalls" r="18.75" cx="-5.166478683902896e-14" cy="-281.25" />
+<circle class="smalls" r="18.75" cx="107.62971535268156" cy="-259.84111851879936" />
+<circle class="smalls" r="18.75" cx="198.87378220871645" cy="-198.87378220871653" />
+<circle class="smalls" r="18.75" cx="259.8411185187994" cy="-107.62971535268144" />
+<circle class="smalls" r="18.75" cx="281.25" cy="-6.888638245203862e-14" />
+<circle class="smalls" r="18.75" cx="259.8411185187994" cy="107.62971535268154" />
+  </g>
+</svg>
+
