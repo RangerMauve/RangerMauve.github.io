@@ -1,7 +1,11 @@
+@import url("agregore://theme/vars.css");
+
 html,
 body {
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 	text-align: center;
+	background: var(--ag-theme-background);
+	color: var(--ag-theme-text);
 }
 
 body {
