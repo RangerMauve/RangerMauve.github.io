@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>TextGrower</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Grow text on the screen">
+<style>
+  body, html {
+    margin:0px;
+    padding:0px;
+    font-family: system-ui;
+  }
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    border: none;
+    font-size: 1em;
+  }
+  section {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+  }
+  button {
+    width: 3em;
+    height: 3em;
+    border: 1 px solid black;
+    background: white;
+  }
+</style>
+<section>
+<button id="growButton" title="Click to increase font size">➕</button>
+<button id="shrinkButton" title="Click to decrease font size">➖</button>
+</section>
+<textarea id="contentBox">
+Type your text here
+</textarea>
+<script type="module">
+  let size = 1;
+  growButton.onclick = () => {
+    contentBox.style.fontSize = `${++size}em`
+  }
+  shrinkButton.onclick = () => {
+    contentBox.style.fontSize = `${--size}em`
+  }
+</script>
